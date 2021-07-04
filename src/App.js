@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import News from './components/News';
+import styled, { createGlobalStyle } from 'styled-components';
+import NewsList from './components/NewsList';
 
+const GlobalStyle = createGlobalStyle`
+  body{
+    background:#ccc7c7;
+  }
+`;
 function App() {
+  console.log('App test');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GlobalStyle />
+      <NewsList />
     </div>
   );
 }
